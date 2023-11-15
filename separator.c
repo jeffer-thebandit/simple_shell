@@ -13,32 +13,32 @@ char **separator(char *input)
 	int buffsize;
 	char **temp;
 
-	if (!input || input[0] == '\0') 
+	if (!input || input[0] == '\0')
 	{
-		return NULL;
+		return (NULL);
 	}
-       
+
 	buffsize = BUFSIZE;
 	commands = malloc(sizeof(char *) * buffsize);
-	if (!commands) 
+	if (!commands)
 	{
 		perror("Memory allocation error");
-		return NULL;
+		return (NULL);
 	}
-	
+
 	i = 0;
 	command = _strtok(input, ";&");
-	while (command != NULL) 
+	while (command != NULL)
 	{
-		if (i >= buffsize - 1) 
+		if (i >= buffsize - 1)
 		{
 			buffsize *= 2;
 			temp = realloc(commands, sizeof(char *) * buffsize);
-			if (!temp) 
+			if (!temp)
 			{
 				perror("Memory reallocation error");
 				free(commands);
-				return NULL;
+				return (NULL);
 			}
 			commands = temp;
 		}
@@ -47,6 +47,6 @@ char **separator(char *input)
 		command = _strtok(NULL, ";&");
 	}
 	commands[i] = NULL;
-	
-	return commands;
+
+	return (commands);
 }

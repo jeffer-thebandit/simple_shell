@@ -22,7 +22,7 @@ void print_error(char *input, int counter, char **argv)
 }
 
 /**
- *  _prerror - Prints custom Error
+ *  _print_error - Prints custom Error
  * @argv: Arguments before program starts(argv[0] == Shell Program Name)
  * @c: Error Count
  * @cmd: Array of parsed command strings

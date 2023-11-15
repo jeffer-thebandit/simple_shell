@@ -61,7 +61,7 @@ int handle_builtin_function(char **cmd, int st)
 }
 
 /**
- * exit_bul - Exit Status for built-in commands
+ * exit_bultin - Exit Status for built-in commands
  * @cmd: Array of parsed command strings
  * @input: Input recieved from user (to be freed)
  * @argv: Arguments before program starts(argv[0] == Shell Program Name)
@@ -72,7 +72,7 @@ void exit_bultin(char **cmd, char *input, char **argv, int c, int stat)
 {
 	int status;
 	int i;
-	
+
 	i = 0;
 	if (cmd[1] == NULL)
 	{

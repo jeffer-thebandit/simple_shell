@@ -1,7 +1,7 @@
 #include "header.h"
 
 /**
- * check_cmd - Excutes commands found in predefined path
+ * check_command - Excutes commands found in predefined path
  * @cmd: Array of parsed command strings
  * @input: Input recieved from user (to be freed)
  * @c:Shell Excution Time Case of Command Not Found

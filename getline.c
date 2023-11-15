@@ -7,10 +7,10 @@
 char *_getline(void)
 {
 	int i;
-        int rd;
-       	int buffsize;
+	int rd;
+	int buffsize;
 	char c;
-       	char *buffer;
+	char *buffer;
 	char *buf;
 
 
@@ -63,11 +63,11 @@ char *enter(char *string)
 }
 
 /**
- * @brief Removes leading spaces from the input string.
- * @param str Input string to be processed.
- * @return Returns the modified string without leading spaces or an empty string if applicable.
+ * space - function about removing spaces
+ * @str-Input string to be processed.
+ * Return: return Returns the modified string without leading spaces or an empty string
  */
-char *space(char *str) 
+char *space(char *str)
 {
 	int i;
 	int j;
@@ -75,35 +75,35 @@ char *space(char *str)
 
 	i = 0;
 	j = 0;
-	if (str == NULL) 
+	if (str == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
-	while (str[i] == ' ') 
+	while (str[i] == ' ')
 	{
 		i++;
 	}
-	
+
 	buff = malloc(sizeof(char) * (strlen(str) - i + 1));
-	if (buff == NULL) 
+	if (buff == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
-	
-	while (str[i] != '\0') 
+
+	while (str[i] != '\0')
 	{
 		buff[j] = str[i];
 		i++;
 		j++;
 	}
 	buff[j] = '\0';
-	
-	if (buff[0] == '\0' || buff[0] == '#') 
+
+	if (buff[0] == '\0' || buff[0] == '#')
 	{
 		free(buff);
-		return strdup("");
+		return (strdup(""));
 	}
-	return buff;
+	return (buff);
 }
 
 
